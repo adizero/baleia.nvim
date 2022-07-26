@@ -72,6 +72,11 @@ function styles.to_style(ansi_sequence)
       style.modes[mode] = { set = true, value = true }
       index = index + 1
 
+    elseif ansi.disable_modes[codes[index]] then
+      local mode = ansi.disable_modes[codes[index]]
+      style.modes[mode] = { set = true, value = false }
+      index = index + 1
+
     elseif ansi.background[codes[index]] then
       style.background = colors.from_xterm(ansi.background[codes[index]])
       index = index + 1

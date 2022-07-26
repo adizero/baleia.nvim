@@ -50,4 +50,12 @@ ansi.modes = {
   [9] = "strikethrough"
 }
 
+ansi.disable_modes = {
+  [21] = "bold",
+  [23] = "italic",
+  [24] = "underline",
+  [27] = "reverse",
+  [29] = "strikethrough"
+}
+
 return ansi
