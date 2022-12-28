@@ -44,18 +44,31 @@ ansi.background = {
 
 ansi.modes = {
   [1] = "bold",
+  [2] = "faint",  -- not supported by Baleia
   [3] = "italic",
   [4] = "underline",
+  [5] = "blink",  -- not supported by Baleia
+  [6] = "rapidblink",  -- not supported by Baleia
   [7] = "reverse",
-  [9] = "strikethrough"
+  [8] = "conceal",  -- not supported by Baleia
+  [9] = "strikethrough",
+  [20] = "fraktur",  -- not supported by Baleia (Gothic)
+  [21] = "doubleunderline",  -- not supported by Baleia (or not bold on older consoles and terminals)
+  [26] = "proportional",  -- not supported by Baleia
 }
 
+-- [ 10 ] primary font
+-- [ 11 .. 19 ] alternative fonts
+
 ansi.disable_modes = {
-  [21] = "bold",
+  [22] = "bold",  -- (normal intensity, should disable faint as well)
   [23] = "italic",
   [24] = "underline",
+  [25] = "blink",  -- not supported by Baleia
   [27] = "reverse",
-  [29] = "strikethrough"
+  [28] = "conceal",  -- not supported by Baleia
+  [29] = "strikethrough",
+  [50] = "proportional",  -- not supported by Baleia
 }
 
 return ansi
